@@ -1,0 +1,250 @@
+
+@font-face {
+    font-family: "PlayFair001";
+    src: url(./fonts/PlayfairDisplay-Regular.ttf);
+}
+@font-face {
+    font-family: "spartan";
+    src: url(./fonts/LeagueSpartan-Regular.ttf);
+}
+@font-face {
+    font-family: "spartanB";
+    src: url(./fonts/LeagueSpartan-Bold.ttf);
+}
+@font-face {
+    font-family: "spartanBB";
+    src: url(./fonts/LeagueSpartan-ExtraBold.ttf);
+}
+.container {  display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 11px 11px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "bigText Blocks"
+      "bigBlocks bigBlocks";
+  }
+  
+  .bigText { grid-area: bigText; }
+  
+  .Blocks { grid-area: Blocks; }
+  
+  .bigBlocks { grid-area: bigBlocks; }
+  .bigBlocks {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr; 
+    gap: 15px 20px; 
+    grid-template-areas: 
+      "block1 block2 block3"; 
+    grid-area: bigBlocks; 
+  }
+  .block1 {
+    background-color: hsl(300, 43%, 22%);
+    grid-area: block1; 
+    padding: 20px;border-radius: 10px;
+    max-height: 270px;
+
+}
+  .block2 {
+    grid-area: block2; 
+    background-color: hsl(300, 43%, 22%);
+    padding: 20px;border-radius: 10px;
+    position: relative;
+    top: 20px;
+    max-height: 270px;
+
+}
+  .block3 {
+    background-color: hsl(300, 43%, 22%);
+    grid-area: block3; 
+    padding: 20px;border-radius: 10px;
+    position: relative;
+    top: 40px;
+    max-height: 260px;
+
+}
+.attribution {
+  font-size: 12px;
+  text-align: center;
+  font-family: "spartan";
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+img.Top{
+    position: fixed;
+z-index:-1;
+top: 0;
+left: 0;
+height: 45%;
+}
+
+img.bottom{
+    position: fixed;
+z-index:-1;
+bottom: 0;
+right: 0;
+height: 80%;
+
+}
+.container{
+    margin: 7.5%;
+}
+.bigText h1{
+    font-family: "spartanB";
+    font-weight: 700;
+    color: hsl(300, 43%, 22%);
+}
+
+.bigText {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: start;
+    align-items: auto;
+    align-content: start;
+    width: 80%;
+    min-width: 280px;
+  }
+  .item {
+    flex: 0 0 auto;
+    width: 75%;
+    margin: 10px;
+  }
+.smalls {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: start;
+    align-items: auto;
+    align-content: start
+  }
+  .items {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex: 0 0 auto;
+    width: 75%;
+    min-width: 310px;
+    max-width: 350px;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 6px;
+    background-color:  hsl(0, 22%, 93%);
+    position: relative;
+  }
+
+  .starHold{
+    margin-right: 15px;
+  }
+  .card2{
+    left: 10%;
+  }
+  .card3{
+    left: 20%;
+  }
+
+  span{
+    color: hsl(300, 43%, 22%);
+    font-family: "spartanB"
+  }
+  p{
+    color: hsl(300, 43%, 22%);
+    font-family: "spartan";
+    font-size: 15px;
+    line-height: 18px;
+  } 
+  .infoHolder{
+    display: flex;
+    flex-direction: row;
+  }
+  .nameplate{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin: 0 10px;
+  }
+
+  .infoChild{
+    border-radius: 40px;
+  }
+
+  span.name{
+    color: #fff;
+    font-family: "spartan";
+  }
+
+  span.meh{
+    color: hsl(333, 80%, 67%);
+    font-family: "spartan";
+
+  }
+
+  p.info{
+    color: #fff;
+    margin-top: 30px;
+    font-size: 15px;
+  }
+
+
+  @media screen and (max-width: 800px) {
+    .block1, .block2, .block3{
+      position: static;
+      height: 220px;
+    }
+    .items{
+      position: static;
+    }
+    
+  }
+
+  @media screen and (max-width: 730px) {
+    .container{
+      display: flex;
+      flex-direction: column;
+      max-width: 500px;
+      align-self: center;
+      margin: 0 auto;
+      align-items: center;
+    }
+    div.bigText{
+      align-items: center;
+    }
+    .item{
+      margin: 0 auto;
+      align-self: center;
+      width: 100%;
+      margin: 0 5%;
+    }
+    .items{
+      flex-direction: column;
+      align-content: center;
+    }
+    .starHold{
+      align-self: center;
+    }
+    h1{
+      text-align: center;
+    }
+    div.item p{
+      text-align: center;
+    }
+    .bigBlocks{
+      display: flex;
+      flex-direction: column;
+      margin: 20px;
+    }
+    .block1, .block2, .block3{
+      max-width: 310px;
+    }
+    .smalls{
+      width: 100%;
+    }
+    .items{
+      max-width: 310px;
+      width: 100%;
+      padding: 5px;
+    }
+  }
